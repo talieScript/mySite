@@ -26,6 +26,16 @@ $('document').ready(function(){
     $('.special.cards .image').dimmer({
         on: 'hover'
       });
+      var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
    
 });
 
@@ -109,6 +119,8 @@ $("#nav a").click(function(e) {
     var targetPosition = $(targetElement).offset().top;
     $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
 })
+
+
 
 
 

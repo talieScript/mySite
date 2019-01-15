@@ -1,7 +1,10 @@
-/* font-family: 'Signika Negative', sans-serif;
-font-family: 'Coda', cursive; */
 
 body{
+	width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 	margin: 0px;
     padding-top: 0px;
     font-size: 1.3em;
@@ -68,7 +71,7 @@ body .ui .header {
 	font-size: 1.6em;
 }
 #about img{
-	padding-right: 20px;
+	width: 350px;
 }
 
 /* -==================skills========================== */
