@@ -189,4 +189,9 @@ body .ui .header {
 .github {
 	color:black
 }
-.facebook {color:white}
+.facebook {
+	color:white
+}
+#conatactParagraph {
+	margin-top: -27px;
+}

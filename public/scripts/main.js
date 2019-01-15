@@ -6,6 +6,7 @@ $('document').ready(function(){
     typeInit();
     sliderInit();
     owlCarouselInit();
+    revealInit();
 
     $(window).on("scroll", onScroll);
     const skillSTop = $('#skills').offset().top;    
@@ -42,8 +43,12 @@ $('document').ready(function(){
 function sliderInit() {
     $('#slides').superslides({
         play: 4000,
-        animation: "fade"
+        animation: "fade",
+        patigation: false
     })
+    var navHeight = $("#nav").outerHeight();
+    var slidesHeight = $("#slides").outerHeight();
+    $("#slides").css("height", slidesHeight-navHeight+"px")
 };
 function typeInit() {
 	var typed = new Typed(".typed", {
@@ -92,25 +97,27 @@ function pieChartInit() {
     });
 };
 
-ScrollReveal({
-    reset: true,
-    duration: 800
-}).reveal('.card1');
-ScrollReveal({
-    reset: true,
-    delay: 200,
-    duration: 800
-}).reveal('.card2')
-ScrollReveal({
-    reset: true,
-    delay: 400,
-    duration: 800
-}).reveal('.card3')
-ScrollReveal({
-    reset: true,
-    delay: 600,
-    duration: 800
-}).reveal('.card4')
+function revealInit(){
+    ScrollReveal({
+        reset: true,
+        duration: 800
+    }).reveal('.card1');
+    ScrollReveal({
+        reset: true,
+        delay: 200,
+        duration: 800
+    }).reveal('.card2')
+    ScrollReveal({
+        reset: true,
+        delay: 400,
+        duration: 800
+    }).reveal('.card3')
+    ScrollReveal({
+        reset: true,
+        delay: 600,
+        duration: 800
+    }).reveal('.card4')
+}
 
 $("#nav a").click(function(e) {
     e.preventDefault();
@@ -118,6 +125,13 @@ $("#nav a").click(function(e) {
     var targetElement = $(this).attr("href");
     var targetPosition = $(targetElement).offset().top;
     $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
+})
+
+$(window).resize(function slidesHeight() {
+    var navHeight = $("#nav").outerHeight();
+    var slidesHeight = $("#slides").outerHeight();
+    $("#slides").css("height", slidesHeight-navHeight+"px")
+    console.log("resized")
 })
 
 
