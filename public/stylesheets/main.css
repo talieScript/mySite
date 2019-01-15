@@ -42,6 +42,7 @@ body .ui .header {
 	z-index: 5;
 	text-align: center;
 	margin-top: -125px;
+	font-size: 0.8em;
 }
 .titleMessage .heading p{
 	color: white;
@@ -71,7 +72,7 @@ body .ui .header {
 	font-size: 1.6em;
 }
 #about img{
-	width: 350px;
+	width: 370px;
 }
 
 /* -==================skills========================== */

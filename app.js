@@ -10,5 +10,5 @@ app.get("/", function(req, res){
 });
 
 app.listen(process.env.PORT || 8000, () => {
-    console.log('Example app listening on port 8000!')
+    console.log('app listening on port 8000!')
   });
