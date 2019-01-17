@@ -166,6 +166,9 @@ body .ui .header {
 .cardIcons {
 	font-size: 2.2em;
 }
+#contact .fa-codepen{
+	color:white;
+}
 
 /* =============== Conatct ================ */
 
