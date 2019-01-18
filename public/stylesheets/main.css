@@ -183,7 +183,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(52,152,219,0.9696
 	color: white
 }
 #contact a {
-	color: #4cd137
+	color: #fd9644;
 }
 
 #contact i {
@@ -191,7 +191,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(52,152,219,0.9696
 	margin-top: 7px;
 }
 .github {
-	color:black
+	color: white
 }
 .facebook {
 	color:white
