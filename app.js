@@ -9,6 +9,10 @@ app.get("/", function(req, res){
     res.render("index")
 });
 
+app.get("/calculator", function(req, res){
+    res.render("mini_prodjects/calculator/calc.ejs");
+});
+
 app.listen(process.env.PORT || 8000, () => {
     console.log('app listening on port 8000!')
-  });
+});
