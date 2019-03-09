@@ -29,7 +29,6 @@ body{
 }
 #calc-zero {
     width: 52.66666667px;
-    border-radius: 0 0 0 7px;
 }
 #calc-clear {
     width: 52.66666667px;
@@ -46,7 +45,6 @@ body{
     overflow: hidden;
     padding: 12px;
     border-radius: 7px 7px 0 0;
-
 }
 .calc-btn-operator {
     background-color: orange;
@@ -55,9 +53,6 @@ body{
 h1{
     text-align: center;
     margin-top: 50px;
-}
-#calc-equals{
-    border-radius: 0 0 7px 0
 }
 #calculator-body{
     margin-left: calc(50% - 100px);
@@ -68,4 +63,12 @@ h1{
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+a{
+    text-decoration: none;
+}
+#back-button{
+    width: 198px;
+    border-radius: 0 0 7px 7px;
 }
