@@ -170,7 +170,7 @@ body .ui .header {
 	color:white;
 }
 
-/* =============== Conatct ================ */
+/* =============== Contact ================ */
 
 #contact {
 	background: rgb(255,255,255);
@@ -180,7 +180,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(52,152,219,0.9696
 }
 #contact h3, #contact p {
 	margin-top: -10px;
-	color: white
+	color: white;
 }
 #contact a {
 	color: #fd9644;
@@ -191,11 +191,15 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(52,152,219,0.9696
 	margin-top: 7px;
 }
 .github {
-	color: white
+	color: white;
 }
 .facebook {
-	color:white
+	color:white;
 }
 #conatactParagraph {
 	margin-top: -27px;
+}
+.portifolio-headings{
+	text-decoration: underline;
+	padding: 40px;
 }
