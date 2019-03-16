@@ -170,6 +170,10 @@ body .ui .header {
 	color:white;
 }
 
+.red-text {
+	color: red;
+}
+
 /* =============== Contact ================ */
 
 #contact {
