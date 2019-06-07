@@ -8,16 +8,8 @@ app.use(express.static(__dirname+"/public"));
 app.get("/", function(req, res){
     res.render("index")
 });
-// mini prodjects
-app.get("/calculator", function(req, res){
-    res.render("mini_prodjects/calc");
-});
-app.get("/rgb_game", function(req, res){
-    res.render("mini_prodjects/rgb");
-});
-app.get("/case_converter", function(req, res){
-    res.render("mini_prodjects/case_converter")
-});
+
+
 
 app.listen(process.env.PORT || 8000, () => {
     console.log('app listening on port 8000!')
