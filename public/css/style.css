@@ -1,0 +1,103 @@
+:root {
+  --color-primary: #1f1d2c;
+  --color-primary-dark: #141124;
+  --color-primary-light: #1e1936;
+  --color-secondary: #ff6666;
+  --color-tertiary: #098681;
+  --grey-light-1: #f7f7f7;
+  --grey-light-2: #eee;
+  --grey-dark: #777;
+  --grey-dark-2: #999;
+  --grey-dark-3: #333; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  /* 62.5% * 16px = 10 px */ }
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
+.nav {
+  background-color: #1b1735f5;
+  color: #f7f7f7;
+  height: 7rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; }
+  .nav__container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    max-width: 110rem;
+    margin: 0 auto;
+    height: 100%; }
+  .nav__logo {
+    filter: grayscale(100%);
+    align-self: center;
+    margin-right: auto;
+    height: 4rem;
+    width: auto; }
+  .nav__list {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    list-style: none; }
+  .nav__item {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    width: 20%;
+    transition: all .3s;
+    color: var(--color-grey-dark-3);
+    padding-top: 2.9rem;
+    border-top: solid 0 var(--color-secondary);
+    cursor: pointer; }
+  .nav__item-active {
+    padding-top: 2.3rem;
+    border-top: solid 0.4rem var(--color-secondary);
+    color: white; }
+  .nav__item:hover {
+    padding-top: 1.7rem;
+    border-top: solid 0.4rem var(--color-secondary);
+    color: white; }
+  .nav__link:link, .nav__link:visited {
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: "Karla", sans-serif;
+    justify-self: center;
+    color: inherit; }
+
+.header {
+  height: 100rem;
+  background-color: #141124;
+  position: relative;
+  overflow: hidden; }
+  .header__developer {
+    font-size: 15rem;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    color: rgba(247, 247, 247, 0.03);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 26rem;
+    left: -25rem;
+    cursor: default; }
+  .header__developer span:hover {
+    color: rgba(247, 247, 247, 0.06); }
+  .header__obj {
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    right: 0; }

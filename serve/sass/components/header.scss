@@ -1,0 +1,27 @@
+.header {
+    height: 100rem;
+    background-color: $color-primary-dark;
+    position: relative;
+    overflow: hidden;
+    &__developer {
+        font-size: 15rem;
+        font-family: 'Fjalla One', sans-serif;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        color: rgba($color-grey-light-1, .03);
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 26rem;
+        left: -25rem;
+        cursor: default;
+    }
+    &__developer span:hover, {
+        color: rgba($color-grey-light-1, .06);
+    }
+    &__obj {
+        height: 70%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
