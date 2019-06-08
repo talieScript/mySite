@@ -1,5 +1,6 @@
 // ====== Abstarcts =======
 @import "./abstracts/variables";
+@import "./abstracts/mixins";
 
 // ====== Base =======
 @import "./base/base";
@@ -11,7 +12,10 @@
 
 // ====== typography =====
 @import "./typography/header-title";
+@import "./typography/about-text";
+@import "./typography/section-header";
 
 
 // ======= layout ==========
 @import "./layout/header";
+@import "./layout/about";
