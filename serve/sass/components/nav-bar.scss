@@ -1,6 +1,6 @@
 .nav {
     background-color: $color-primary;
-    color: $color-grey-light-1;
+    color: $color-grey-light;
     height: 7rem;
     position: fixed;
     width:100%;
@@ -19,6 +19,10 @@
         margin-right: auto;
         height: 4rem;
         width: auto;
+        transition: all .3;
+    }
+    &__logo:hover {
+        filter: none;
     }
     &__list {
         display: flex;

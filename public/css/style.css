@@ -45,7 +45,10 @@ body {
     align-self: center;
     margin-right: auto;
     height: 4rem;
-    width: auto; }
+    width: auto;
+    transition: all .3; }
+  .nav__logo:hover {
+    filter: none; }
   .nav__list {
     display: flex;
     justify-content: space-around;
@@ -78,6 +81,47 @@ body {
     justify-self: center;
     color: inherit; }
 
+[class^="btn"]:visited, [class^="btn"]:link {
+  padding: 1.5rem 3rem;
+  background-color: #098681;
+  color: #f7f7f7;
+  font-family: "Karla", sans-serif;
+  font-size: 2rem;
+  border: solid 1px #f7f7f7;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all .3s;
+  letter-spacing: .2rem; }
+
+.btn--1:hover {
+  transform: translateY(-1rem) scale(1.03);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3);
+  color: #fff; }
+
+.btn--1:active {
+  transform: translateY(0.2rem) scale(1);
+  box-shadow: none; }
+
+.title {
+  position: absolute;
+  top: 25rem;
+  left: 15%; }
+  .title__secondary {
+    font-size: 2rem;
+    font-family: 'Karla', sans-serif;
+    color: #999; }
+  .title__main {
+    color: #ff6666;
+    font-size: 11rem;
+    line-height: 10rem; }
+  .title__text {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem; }
+    .title__text span {
+      display: block; }
+
 .header {
   height: 100rem;
   background-color: #141124;
@@ -85,7 +129,7 @@ body {
   overflow: hidden; }
   .header__developer {
     font-size: 15rem;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     letter-spacing: .3rem;
     text-transform: uppercase;
     color: rgba(247, 247, 247, 0.03);
@@ -97,7 +141,9 @@ body {
   .header__developer span:hover {
     color: rgba(247, 247, 247, 0.06); }
   .header__obj {
-    height: 70%;
+    height: 50%;
     position: absolute;
     bottom: 0;
     right: 0; }
+  .header__obj:hover {
+    -webkit-filter: brightness(70%); }

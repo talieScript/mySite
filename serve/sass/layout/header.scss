@@ -5,23 +5,26 @@
     overflow: hidden;
     &__developer {
         font-size: 15rem;
-        font-family: 'Fjalla One', sans-serif;
+        font-family: $developer-font;
         letter-spacing: .3rem;
         text-transform: uppercase;
-        color: rgba($color-grey-light-1, .03);
+        color: rgba($color-grey-light, .03);
         transform: rotate(-90deg);
         position: absolute;
         top: 26rem;
         left: -25rem;
         cursor: default;
     }
-    &__developer span:hover, {
-        color: rgba($color-grey-light-1, .06);
+    &__developer span:hover {
+        color: rgba($color-grey-light, .06);
     }
     &__obj {
-        height: 70%;
+        height: 50%;
         position: absolute;
         bottom: 0;
         right: 0;
+    }
+    &__obj:hover {
+        -webkit-filter: brightness(70%); 
     }
 }

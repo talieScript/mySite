@@ -7,4 +7,11 @@
 
 // ====== Componets =======
 @import "./components/nav-bar";
-@import "./components/header";
+@import "./components/button";
+
+// ====== typography =====
+@import "./typography/header-title";
+
+
+// ======= layout ==========
+@import "./layout/header";

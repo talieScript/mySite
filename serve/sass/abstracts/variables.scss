@@ -28,14 +28,22 @@ $color-secondary: #ff6666;
 
 $color-tertiary: #098681;
 
-$color-grey-light-1: #f7f7f7;
+$color-grey-light: #f7f7f7;
 $color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 
+
+// fonts
 $primary-font: 'Karla', sans-serif;
+$developer-font: 'Fjalla One', sans-serif;
+
+
+// shadow
+$basic-shadow: 0 1rem 2rem rgba(#000, .2);
+$dark-shadow: 0 1rem 2.5rem rgba(#000, .3);
 
 
 

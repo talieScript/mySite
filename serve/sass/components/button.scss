@@ -1,0 +1,28 @@
+[class^="btn"] {
+    &:visited, &:link{
+        padding: 1.5rem 3rem;
+        background-color: $color-tertiary;
+        color: $color-grey-light;
+        font-family: $primary-font;
+        font-size: 2rem;
+        border: solid 1px $color-grey-light;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: $basic-shadow;
+        transition: all .3s;
+        letter-spacing: .2rem;
+    }
+}
+.btn {
+    &--1 {
+        &:hover {
+            transform: translateY(-1rem) scale(1.03);
+            box-shadow: $dark-shadow;
+            color: #fff;
+        }
+        &:active {
+            transform: translateY(.2rem) scale(1);
+            box-shadow: none;
+        }
+    }
+}
