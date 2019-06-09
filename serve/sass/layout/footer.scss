@@ -1,8 +1,8 @@
 .footer {
+    position: relative;
     background-color: $color-primary-light-1;
-    height: 20rem;
     &__icon-box {
-
+        
     }
 
     &__social-icon {
@@ -10,6 +10,18 @@
     }
 
     &__copy {
+        text-align: center;
+        color: $color-grey-light;
+        font-family: $primary-font;
 
+    }
+
+    // background object
+    &__obj {
+        opacity: .1;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
     }
 }

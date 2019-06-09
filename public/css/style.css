@@ -319,9 +319,9 @@ body {
     right: 0; }
 
 .port {
-  background-image: linear-gradient(to bottom, #1e1936ef, #141124);
+  background-image: linear-gradient(to bottom, #1e1936ef, #1b1735f5);
   padding-top: 15rem;
-  padding-bottom: 10rem; }
+  padding-bottom: 6rem; }
   .port__header {
     margin-top: 4rem;
     display: flex; }
@@ -344,9 +344,10 @@ body {
     flex-wrap: wrap; }
 
 .contact {
-  padding: 10rem;
+  padding-top: 10rem;
   position: relative;
-  background-image: linear-gradient(to bottom, #141124, #322a5a); }
+  background-image: linear-gradient(to bottom, #1b1735f5, #322a5a);
+  overflow: hidden; }
   .contact__header {
     text-align: center;
     font-size: 7rem;
@@ -429,9 +430,44 @@ body {
       outline: none;
       transform: translateY(-0.2rem) scale(1.03);
       box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3); }
-  .contact__obj {
+  .contact__icon-box {
+    margin: 4rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%; }
+  .contact__social-icon {
+    position: relative;
+    z-index: 2;
+    height: 4rem;
+    width: 4rem;
+    fill: #f7f7f7;
+    transition: all .4s; }
+    .contact__social-icon--1:hover {
+      transform: translateY(-0.5rem);
+      fill: url(#insta-gradient); }
+    .contact__social-icon--2:hover {
+      transform: translateY(-0.5rem);
+      fill: url(#linked-gradient); }
+    .contact__social-icon--3:hover {
+      transform: translateY(-0.5rem);
+      fill: url(#git-gradient); }
+
+#insta-gradient {
+  width: 0;
+  height: 0;
+  position: absolute; }
+
+.footer {
+  position: relative;
+  background-color: #322a5a; }
+  .footer__copy {
+    text-align: center;
+    color: #f7f7f7;
+    font-family: "Karla", sans-serif; }
+  .footer__obj {
     opacity: .1;
-    width: 85%;
+    width: 100%;
     position: absolute;
-    bottom: -25rem;
+    bottom: 0;
     z-index: 1; }

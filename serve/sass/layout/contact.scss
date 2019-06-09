@@ -1,7 +1,8 @@
 .contact {
-    padding: 10rem;
+    padding-top: 10rem;
     position: relative;
-    background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary-light-1);
+    background-image: linear-gradient(to bottom, $color-primary, $color-primary-light-1);
+    overflow: hidden;
 
     &__header {
         text-align: center;
@@ -116,12 +117,39 @@
         // width: 100%;
     }
 
-    // background object
-    &__obj {
-        opacity: .1;
-        width: 85%;
-        position: absolute;
-        bottom: -25rem;
-        z-index: 1;
+    &__icon-box {
+        margin: 4rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 20%;
+
     }
+
+    &__social-icon {
+        position: relative;
+        z-index: 2;
+        height: 4rem;
+        width: 4rem;
+        fill: $color-grey-light;
+        transition: all .4s;
+        &--1:hover {
+            transform: translateY(-.5rem);
+            fill: url(#insta-gradient)
+        }
+        &--2:hover {
+            transform: translateY(-.5rem);
+            fill: url(#linked-gradient)
+        }
+        &--3:hover {
+            transform: translateY(-.5rem);
+            fill: url(#git-gradient)
+        }
+    }
+}
+
+#insta-gradient {
+    width: 0;
+    height: 0;
+    position: absolute;
 }
