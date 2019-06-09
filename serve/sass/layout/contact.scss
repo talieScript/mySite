@@ -1,0 +1,127 @@
+.contact {
+    padding: 10rem;
+    position: relative;
+    background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary-light-1);
+
+    &__header {
+        text-align: center;
+        font-size: 7rem;
+        color: $color-secondary;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    // first and second names in the name box
+    // and have input-name class
+    &__names-box {
+        margin-bottom: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__input-name {
+        width: calc(50% - 1.2rem);
+        padding: 1.5rem 1.8rem;
+        font-size: 2.4rem;
+        font-family: $primary-font;
+        color: rgba($color-grey-light, $alpha: .5);
+        background-color: transparent;
+        border: 1px solid rgba($color-grey-light, $alpha: .2);
+        transition: all .3s;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid rgba($color-grey-light, $alpha: .8);
+            transform: scale(1.02);
+            color: $color-grey-light;
+        }
+    }
+
+    // the rest of the inputs
+    &__input {
+        flex: 0 0 100%;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        padding: 1.5rem 1.8rem;
+        font-size: 2.4rem;
+        font-family: $primary-font;
+        color: rgba($color-grey-light, $alpha: .5);
+        background-color: transparent;
+        border: 1px solid rgba($color-grey-light, $alpha: .2);
+        transition: all .3s;
+        
+        &:focus {
+            outline: none;
+            border: 1px solid rgba($color-grey-light, $alpha: .8);
+            transform: scale(1.02);
+            color: $color-grey-light;
+        }
+    }
+
+    &__message {
+        width: 100%;
+        z-index: 2;
+        padding: 1.5rem 1.8rem;
+        font-size: 2.4rem;
+        font-family: $primary-font;
+        color: rgba($color-grey-light, $alpha: .5);
+        background-color: transparent;
+        border: 1px solid rgba($color-grey-light, $alpha: .2);
+        transition: all .3s;
+        
+        &:focus {
+            outline: none;
+            border: 1px solid rgba($color-grey-light, $alpha: .8);
+            transform: scale(1.02);
+            color: $color-grey-light;
+        }
+    }
+
+    &__btn {
+        margin:  2rem;
+        padding: 2rem 4rem;
+        border: none;
+        color: $color-grey-light;
+        background-color: $color-secondary;
+        transition: all .2s;
+        box-shadow: $basic-shadow;
+        z-index: 2;
+        &:hover {
+            transform: translateY(-.2rem) scale(1.03);
+            box-shadow: $dark-shadow;
+        }
+        &:active {
+            transform: translateY(.2rem) scale(1);
+            box-shadow: none;
+        }
+        &:focus {
+            outline: none;
+            transform: translateY(-.2rem) scale(1.03);
+            box-shadow: $dark-shadow;
+
+        }
+        // width: 100%;
+    }
+
+    // background object
+    &__obj {
+        opacity: .1;
+        width: 85%;
+        position: absolute;
+        bottom: -25rem;
+        z-index: 1;
+    }
+}
