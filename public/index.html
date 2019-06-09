@@ -15,7 +15,7 @@
             <ul class="nav__list">
                 <li class="nav__item nav__item-active"><a href="/" class="nav__link" >Home</a></li>
                 <li class="nav__item"><a href="/" class="nav__link">About Me</a> </li>
-                <li class="nav__item"><a href="/" class="nav__link">Portifolio</a> </li>
+                <li class="nav__item"><a href="/" class="nav__link">Portfolio</a> </li>
                 <li class="nav__item"><a href="/" class="nav__link">Contact</a> </li>
             </ul>
         </div>
@@ -61,8 +61,70 @@
         <a href="#" class="btn--2 about__btn">Lets Talk</a>
     </section>
 
-    section.portfolio
+    <section class="port">
+        <div class="port__header">
+            <span class="section-header__border--port section-header__border">&nbsp;</span><h4 class="section-header__title--port section-header__title">My Portfolio</h4>
+        </div>
+        <div class="port__intro-box">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, voluptatibus? Dicta ratione, consequuntur veniam quia cum vel Dicta ratione, consequuntur veniam quia cum vel</p> 
+        </div>
+        <div class="port__btn-box">
+            <a class="btn--3 btn--3--active port__btn">All</a>
+            <a class="btn--3 port__btn">Fullstack</a>
+            <a class="btn--3 port__btn">Node</a>
+            <a class="btn--3 port__btn">Vue JS</a>
+            <a class="btn--3 port__btn">CSS</a>
+            <a class="btn--3 port__btn">php</a>
+        </div>
+        <div class="port__show">
+            <div class="card">
+                <!-- front of card -->
+                <div class="card__side card__side--front">
+                    <!-- front img -->
+                    <img class="card__img" src="./images/RGB.png" alt="Taliesin' rgb colour game">
 
+                    <h4 class="card__name card__name--front">RGB Color Game</h4>
+                </div>
+
+                <!-- Back of card -->
+                <div class="card__side card__side--back">
+                    <h4 class="card__name card__name--back">RGB Color Game</h4>
+                    <p class="card__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, id. Quo quisquam, provident eum error molestiae veniam tempore quasi quas</p>
+                    
+                    <a class="card__btn-live card__btn-live--disabled">See Live &rarr;</a>
+                    <label class="card__label" for="card__btn">Currenctly not hosted online &otimes;</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h4 class="contact__header">Conatct Me</h4>
+        <form action="" class="contact__form">
+            <div class="contact__names">
+                <input name="first*" type="text" class="contact__input-name" required>
+                <input name="second" type="text"class="contact__input-name">
+            </div>
+            <input placeholder="Email*" name="email" type="email" class="conatact__input" required>
+            <input placeholder="Phone Number" name="phone" type="text" class="conatact__input" minlength="10" maxlength="15">
+            <input placeholder="Company/Organization" name="company" type="text" class="conatact__input">
+            <textarea name="message*" cols="50" rows="10" required>Message</textarea>
+            <button class="">Send Maessage</button>
+        </form>
+        <img src="./images/contact-obj.svg" alt="contact obj">
+    </section>
+
+    <footer class="footer">
+        <div class="footer__icon-box">
+            <a href="" class="footer__social-icon"></a>
+            <a href="" class="footer__social-icon"></a>
+            <a href="" class="footer__social-icon"></a>
+        </div>
+        <div class="footer__copy">
+            2019 &copy; Taliesin Bowes De Angeli
+        </div>
+    </footer>
+        
 
 
 

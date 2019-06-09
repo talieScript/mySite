@@ -1,0 +1,38 @@
+.port {
+    background-image: linear-gradient(to bottom, $color-primary-light, $color-primary-dark);
+    height: 90rem;
+    // margin-top: -2.7rem;
+    padding-top: 15rem;
+
+    &__header {
+        margin-top: 4rem;
+        display: flex;
+    }
+
+    &__intro-box {
+        display: flex;
+        font-size: 2rem;
+        p {
+            width: 50%;
+            margin-left: 10%;
+        }
+    }
+
+    &__btn-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+    }
+
+    &__btn {
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__show {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+}

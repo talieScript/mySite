@@ -9,6 +9,7 @@
 // ====== Componets =======
 @import "./components/nav-bar";
 @import "./components/button";
+@import "./components/flip-card";
 
 // ====== typography =====
 @import "./typography/header-title";
@@ -19,3 +20,5 @@
 // ======= layout ==========
 @import "./layout/header";
 @import "./layout/about";
+@import "./layout/portfolio";
+@import "./layout/contact";

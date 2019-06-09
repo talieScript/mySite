@@ -108,6 +108,98 @@ body {
   font-weight: 500;
   background-color: #ff6666; }
 
+.btn--3 {
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  color: #333;
+  background-color: #f7f7f7;
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn--3:hover {
+    transform: translateY(-0.5rem) scale(1.03);
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3); }
+  .btn--3:active {
+    transform: translateY(0.2rem) scale(1);
+    box-shadow: none; }
+  .btn--3--active {
+    background-color: #ff6666;
+    color: #eee; }
+
+.card {
+  perspective: 150rem;
+  -moz-perspctive: 150rem;
+  height: 25rem;
+  width: 25rem;
+  position: relative;
+  font-family: "Karla", sans-serif; }
+  .card__side {
+    height: 25rem;
+    width: 100%;
+    transition: all .8s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3); }
+    .card__side--back {
+      transform: rotateY(180deg);
+      background-color: #ff6666; }
+  .card__name--front {
+    color: #fff;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 2.5rem; }
+  .card__name--back {
+    font-size: 2.5rem;
+    color: #f7f7f7;
+    padding: .3rem .5rem; }
+  .card__img {
+    width: 100%;
+    filter: brightness(75%) blur(0.1px); }
+  .card__paragraph {
+    font-size: 1.5rem;
+    padding: .4rem .6rem;
+    padding-left: 1rem;
+    color: #f7f7f7; }
+  .card__btn-live {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    font-size: 1.8rem;
+    padding: .4rem .6rem;
+    padding-left: 1rem;
+    color: #f7f7f7;
+    cursor: pointer;
+    transition: all .2s; }
+    .card__btn-live:hover {
+      letter-spacing: .3rem;
+      text-decoration: underline; }
+    .card__btn-live--disabled {
+      text-decoration: line-through;
+      color: #777; }
+      .card__btn-live--disabled:hover {
+        letter-spacing: 0;
+        text-decoration: line-through; }
+  .card__label {
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-size: 1.6rem;
+    bottom: 4rem;
+    right: 0;
+    display: none; }
+  .card__btn-live--disabled:hover ~ .card__label {
+    display: block; }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+
 .title {
   position: absolute;
   top: 25%;
@@ -154,11 +246,12 @@ body {
   display: block;
   margin-top: 2.7rem;
   margin-left: 25%; }
+  .section-header__border--port {
+    margin-left: 10%; }
 
 .section-header__title {
   font-size: 6rem;
   color: #f7f7f7;
-  width: fit-content;
   padding-left: 1.5rem; }
 
 .header {
@@ -191,27 +284,17 @@ body {
 .about {
   background-image: linear-gradient(to bottom, #141124, #1e1936ef);
   position: relative;
-  padding-bottom: 20rem;
+  padding-bottom: 10vh;
   z-index: 0; }
   .about__obj {
     position: absolute;
     bottom: -25rem;
     right: 0;
-    opacity: .1; }
+    opacity: .1;
+    width: 50%; }
   .about__header {
     display: flex;
     justify-content: center; }
-  .about__header-border {
-    border-left: solid .9rem #ff6666;
-    height: 4.6rem;
-    display: block;
-    margin-top: 2.7rem;
-    margin-left: 25%; }
-  .about__title {
-    font-size: 6rem;
-    color: #f7f7f7;
-    width: fit-content;
-    padding-left: 1.5rem; }
   .about__main {
     margin: 0 auto;
     margin-top: 10rem;
@@ -234,3 +317,27 @@ body {
     margin-right: 10%;
     position: absolute;
     right: 0; }
+
+.port {
+  background-image: linear-gradient(to bottom, #1e1936ef, #141124);
+  height: 90rem;
+  padding-top: 15rem; }
+  .port__header {
+    margin-top: 4rem;
+    display: flex; }
+  .port__intro-box {
+    display: flex;
+    font-size: 2rem; }
+    .port__intro-box p {
+      width: 50%;
+      margin-left: 10%; }
+  .port__btn-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem; }
+  .port__btn:not(:last-child) {
+    margin-right: 2rem; }
+  .port__show {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center; }

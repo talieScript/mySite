@@ -1,0 +1,106 @@
+.card {
+
+    perspective: 150rem;
+    -moz-perspctive: 150rem;
+    height: 25rem;
+    width: 25rem;
+    position: relative;
+    font-family: $primary-font;
+    // side styling
+    &__side {
+        height: 25rem;
+        width: 100%;
+        transition: all .8s ease-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        overflow: hidden;
+        box-shadow: $dark-shadow;
+        &--front {
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            background-color: $color-secondary;
+        }
+    }
+    // name styling
+    &__name {
+        &--front {
+            color: #fff;
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            font-size: 2.5rem;            
+        }
+
+        &--back {
+            font-size: 2.5rem;
+            color: $color-grey-light;
+            padding: .3rem .5rem;
+        }
+    }
+
+    // front side only
+    &__img {
+        width: 100%;
+        filter: brightness(75%) blur(.1px);
+    }
+
+    // back side only
+    &__paragraph {
+        font-size: 1.5rem;
+        padding: .4rem .6rem;
+        padding-left: 1rem;
+        color: $color-grey-light;
+    }
+
+    &__btn-live {
+        position: absolute;
+        bottom: .5rem;
+        right: .5rem;
+        font-size: 1.8rem;
+        padding: .4rem .6rem;
+        padding-left: 1rem;
+        color: $color-grey-light;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover {
+            letter-spacing: .3rem;
+            text-decoration: underline;
+        }
+        &--disabled {
+            text-decoration: line-through;
+            color: $color-grey-dark;
+            &:hover {
+                letter-spacing: 0;
+                text-decoration: line-through;
+            }
+    
+        }
+        
+    }
+
+    // label for disabled live button
+    &__label {
+        position: absolute;
+        background-color: red;
+        color: white;
+        font-size: 1.6rem;
+        bottom: 4rem;
+        right: 0;
+        display: none;
+    }
+
+    &__btn-live--disabled:hover ~ &__label {
+        display: block;
+    }
+    // hover flip animation
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}
