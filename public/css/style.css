@@ -32,7 +32,8 @@ body {
   height: 7rem;
   position: fixed;
   width: 100%;
-  z-index: 1000; }
+  z-index: 1000;
+  transition: height 0.4s 0.4s cubic-bezier(0.81, 0.25, 0.47, 1.04); }
   .nav__container {
     display: flex;
     align-content: center;
@@ -40,6 +41,9 @@ body {
     max-width: 110rem;
     margin: 0 auto;
     height: 100%; }
+    @media only screen and (max-width: 75em) {
+      .nav__container {
+        width: 85%; } }
   .nav__logo {
     filter: grayscale(100%);
     align-self: center;
@@ -47,6 +51,11 @@ body {
     height: 4rem;
     width: auto;
     transition: all .3; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__logo {
+        position: absolute;
+        top: 1.5rem;
+        left: 2rem; } }
   .nav__logo:hover {
     filter: none; }
   .nav__list {
@@ -54,6 +63,15 @@ body {
     justify-content: space-around;
     width: 40%;
     list-style: none; }
+    @media only screen and (max-width: 75em) {
+      .nav__list {
+        width: 60%; } }
+    @media only screen and (max-width: 56.25em) {
+      .nav__list {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center; } }
   .nav__item {
     align-self: stretch;
     display: flex;
@@ -64,14 +82,41 @@ body {
     padding-top: 2.9rem;
     border-top: solid 0 var(--color-secondary);
     cursor: pointer; }
+    .nav__item:hover {
+      padding-top: 1.7rem;
+      border-top: solid 0.4rem var(--color-secondary);
+      color: white; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__item {
+        align-self: center;
+        border-left: solid 0 var(--color-secondary);
+        padding-top: 0;
+        margin-top: 10%;
+        margin-left: -200%;
+        transition: margin-left 1s cubic-bezier(0.65, 0.06, 0.15, 1.46);
+        line-height: 2.6rem; }
+        .nav__item:hover {
+          padding-top: 0;
+          border-top: none;
+          color: white; }
+        .nav__item--animate {
+          margin-left: 0;
+          transition-delay: .4s;
+          transition-property: margin-left; } }
+    @media only screen and (max-width: 37.5em) {
+      .nav__item {
+        width: 100%;
+        padding-right: 0; } }
   .nav__item-active {
     padding-top: 2.3rem;
     border-top: solid 0.4rem var(--color-secondary);
     color: white; }
-  .nav__item:hover {
-    padding-top: 1.7rem;
-    border-top: solid 0.4rem var(--color-secondary);
-    color: white; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__item-active {
+        align-self: center;
+        border-top: none;
+        border-left: solid 0.4rem var(--color-secondary);
+        padding-top: 0; } }
   .nav__link:link, .nav__link:visited {
     width: 100%;
     text-decoration: none;
@@ -80,6 +125,59 @@ body {
     font-family: "Karla", sans-serif;
     justify-self: center;
     color: inherit; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__link:link, .nav__link:visited {
+        font-size: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .nav__link:link, .nav__link:visited {
+        padding-right: 1rem; } }
+  .nav__collapse-btn-box {
+    position: relative;
+    margin-top: .5rem; }
+  .nav__checkbox {
+    display: none; }
+  .nav__collapse-btn {
+    position: absolute;
+    top: 3rem;
+    right: -3rem;
+    display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__collapse-btn {
+        display: block; } }
+  .nav__icon {
+    position: relative;
+    transition: all .3s; }
+    @media only screen and (max-width: 37.5em) {
+      .nav__icon {
+        margin-right: 1.5rem; } }
+    .nav__icon, .nav__icon::before, .nav__icon::after {
+      width: 3rem;
+      height: 3px;
+      background-color: #f7f7f7;
+      display: inline-block; }
+    .nav__icon::before, .nav__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .3s; }
+    .nav__icon::before {
+      top: -1.1rem; }
+    .nav__icon::after {
+      top: 1.1rem; }
+  .nav__icon--animate::before {
+    top: 0;
+    transform: rotate(45deg); }
+  .nav__icon--animate::after {
+    top: 0;
+    transform: rotate(-45deg); }
+  .nav__icon--animate {
+    background-color: transparent; }
+
+.nav--animate {
+  transition: all 0.5s cubic-bezier(0.81, 0.25, 0.47, 1.04);
+  height: 100vh;
+  flex-direction: column;
+  transition-delay: 0; }
 
 [class^="btn"]:visited, [class^="btn"]:link {
   padding: 1.5rem 3rem;
@@ -90,6 +188,9 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transition: all .3s;
   letter-spacing: .2rem; }
+  @media only screen and (max-width: 56.25em) {
+    [class^="btn"]:visited, [class^="btn"]:link {
+      padding: .8rem 2rem; } }
   [class^="btn"]:visited:hover, [class^="btn"]:link:hover {
     transform: translateY(-1rem) scale(1.03);
     box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3);
@@ -124,6 +225,10 @@ body {
   .btn--3:active {
     transform: translateY(0.2rem) scale(1);
     box-shadow: none; }
+  @media only screen and (max-width: 75em) {
+    .btn--3 {
+      padding: .8rem 2.5rem;
+      font-size: 1.5rem; } }
   .btn--3--active {
     background-color: #ff6666;
     color: #eee; }
@@ -134,7 +239,18 @@ body {
   height: 25rem;
   width: 25rem;
   position: relative;
-  font-family: "Karla", sans-serif; }
+  font-family: "Karla", sans-serif;
+  margin-right: 3rem;
+  margin-top: 3rem; }
+  @media only screen and (max-width: 56.25em), screen and (hover: none) {
+    .card {
+      margin-top: 27rem;
+      height: 20rem;
+      width: 25rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .card {
+      width: 80%;
+      margin-top: 23rem; } }
   .card__side {
     height: 25rem;
     width: 100%;
@@ -144,28 +260,54 @@ body {
     left: 0;
     backface-visibility: hidden;
     overflow: hidden;
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 1%; }
+    @media only screen and (max-width: 56.25em), screen and (hover: none) {
+      .card__side {
+        height: 20rem; } }
+    @media only screen and (max-width: 56.25em), screen and (hover: none) {
+      .card__side--front {
+        border-radius: 1% 1% 0 0; } }
     .card__side--back {
       transform: rotateY(180deg);
       background-color: #ff6666; }
+      @media only screen and (max-width: 56.25em), screen and (hover: none) {
+        .card__side--back {
+          transform: rotateY(0);
+          top: 100%; } }
+      @media only screen and (max-width: 56.25em), screen and (hover: none) {
+        .card__side--back {
+          border-radius: 0 0 1% 1%; } }
   .card__name--front {
     color: #fff;
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    font-size: 2.5rem; }
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    background-color: #ff6666;
+    width: 100%; }
+    @media only screen and (max-width: 56.25em), screen and (hover: none) {
+      .card__name--front {
+        display: none; } }
   .card__name--back {
     font-size: 2.5rem;
     color: #f7f7f7;
     padding: .3rem .5rem; }
+    @media only screen and (max-width: 56.25em), screen and (hover: none) {
+      .card__name--back {
+        font-size: 1.8rem; } }
   .card__img {
     width: 100%;
-    filter: brightness(75%) blur(0.1px); }
+    filter: blur(0.1px); }
   .card__paragraph {
     font-size: 1.5rem;
     padding: .4rem .6rem;
     padding-left: 1rem;
     color: #f7f7f7; }
+    @media only screen and (max-width: 56.25em), screen and (hover: none) {
+      .card__paragraph {
+        font-size: 1.3rem; } }
   .card__btn-live {
     position: absolute;
     bottom: .5rem;
@@ -193,36 +335,72 @@ body {
     bottom: 4rem;
     right: 0;
     display: none; }
-  .card__btn-live--disabled:hover ~ .card__label {
+    @media only screen and (max-width: 56.25em), screen and (hover: none) {
+      .card__label {
+        font-size: 1.4rem; } }
+  .card__btn-live--disabled:hover ~ .card__label, .card__btn-live--disabled:active ~ .card__label {
     display: block; }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
+    @media only screen and (max-width: 56.25em), screen and (hover: none) {
+      .card:hover .card__side--front {
+        transform: rotateY(0); } }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+    @media only screen and (max-width: 56.25em), screen and (hover: none) {
+      .card:hover .card__side--back {
+        transform: rotateY(0); } }
 
 .title {
   position: absolute;
   top: 25%;
   left: 15%; }
+  @media only screen and (max-width: 75em) {
+    .title {
+      left: 15%; } }
   .title__secondary {
     font-size: 2rem;
     font-family: 'Karla', sans-serif;
     color: #999; }
+    @media only screen and (min-width: 100em) {
+      .title__secondary {
+        font-size: 4rem; } }
   .title__main {
     color: #ff6666;
-    font-size: 11rem;
-    line-height: 10rem; }
+    font-size: 12rem;
+    line-height: 9rem; }
+    @media only screen and (min-width: 100em) {
+      .title__main {
+        font-size: 14rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .title__main {
+        font-size: 9rem;
+        line-height: 7rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .title__main {
+        font-size: 6rem;
+        line-height: 5rem; } }
   .title__text {
     margin-top: 3rem;
     margin-bottom: 3rem;
     font-size: 2.5rem; }
+    @media only screen and (min-width: 100em) {
+      .title__text {
+        font-size: 4.5rem; } }
+    @media only screen and (max-width: 75em) {
+      .title__text {
+        font-size: 2rem;
+        margin-top: 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .title__text {
+        font-size: 1.5rem;
+        margin-top: 1.5rem; } }
     .title__text span {
       display: block; }
 
 .text-box__sub-header::before {
   content: "";
   padding: 1px 2rem;
-  padding-bottom: 0rem;
   border-top: solid #ff6666 3px;
   position: absolute;
   top: 2.5rem;
@@ -233,12 +411,18 @@ body {
   position: relative;
   margin-left: 5rem;
   color: #eee; }
+  @media only screen and (max-width: 75em) {
+    .text-box__sub-header {
+      font-size: 2; } }
 
 .text-box__paragraph {
   font-size: 2rem;
   color: #999; }
   .text-box__paragraph:not(:last-child) {
     margin-bottom: 2rem; }
+  @media only screen and (max-width: 75em) {
+    .text-box__paragraph {
+      font-size: 1.7rem; } }
 
 .section-header__border {
   border-left: solid .9rem #ff6666;
@@ -248,11 +432,23 @@ body {
   margin-left: 25%; }
   .section-header__border--port {
     margin-left: 10%; }
+  @media only screen and (max-width: 75em) {
+    .section-header__border {
+      border-left: solid .7rem #ff6666;
+      margin-top: 1.8rem;
+      height: 3.7rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-header__border {
+      margin-left: 40%; } }
 
 .section-header__title {
   font-size: 6rem;
   color: #f7f7f7;
   padding-left: 1.5rem; }
+  @media only screen and (max-width: 75em) {
+    .section-header__title {
+      font-size: 4.5rem;
+      padding-left: 1rem; } }
 
 .header {
   height: 100vh;
@@ -270,6 +466,20 @@ body {
     top: 26rem;
     left: -25rem;
     cursor: default; }
+    @media only screen and (min-width: 100em) {
+      .header__developer {
+        font-size: 18rem;
+        top: 30rem;
+        left: -29rem; } }
+    @media only screen and (max-width: 75em) {
+      .header__developer {
+        font-size: 13rem;
+        left: -22rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__developer {
+        font-size: 10rem;
+        left: -17rem;
+        top: 21rem; } }
   .header__developer span:hover {
     color: rgba(247, 247, 247, 0.06); }
   .header__obj {
@@ -285,7 +495,11 @@ body {
   background-image: linear-gradient(to bottom, #141124, #1e1936ef);
   position: relative;
   padding-bottom: 10vh;
-  z-index: 0; }
+  z-index: 0;
+  padding-top: 10rem; }
+  @media only screen and (max-width: 75em) {
+    .about {
+      padding-top: 7.5rem; } }
   .about__obj {
     position: absolute;
     bottom: -25rem;
@@ -300,17 +514,34 @@ body {
     margin-top: 10rem;
     display: flex;
     width: 100%;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-items: center; }
+    @media only screen and (max-width: 75em) {
+      .about__main {
+        margin-top: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .about__main {
+        justify-content: center; } }
   .about__portrate {
     height: 45rem;
-    border-radius: 50%;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%); }
+    border-radius: 50%; }
+    @media only screen and (max-width: 75em) {
+      .about__portrate {
+        height: 35rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .about__portrate {
+        display: none; } }
   .about__caption {
     margin-top: -3.5rem;
     font-size: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .about__caption {
+        display: none; } }
   .about__text-box {
     flex: 0 1 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .about__text-box {
+        flex: 0 1 80%; } }
   .about__btn {
     padding: 0.7rem 3rem !important;
     margin: 2rem;
@@ -321,7 +552,14 @@ body {
 .port {
   background-image: linear-gradient(to bottom, #1e1936ef, #1b1735f5);
   padding-top: 15rem;
-  padding-bottom: 6rem; }
+  padding-bottom: 6rem;
+  overflow: hidden; }
+  @media only screen and (max-width: 56.25em), screen and (hover: none) {
+    .port {
+      padding-top: 8rem; } }
+  @media only screen and (max-width: 56.25em), screen and (hover: none) {
+    .port {
+      padding-bottom: 25rem; } }
   .port__header {
     margin-top: 4rem;
     display: flex; }
@@ -331,16 +569,50 @@ body {
     .port__intro-box p {
       width: 50%;
       margin-left: 10%; }
+      @media only screen and (max-width: 56.25em), screen and (hover: none) {
+        .port__intro-box p {
+          width: 70%; } }
+    @media only screen and (max-width: 37.5em) {
+      .port__intro-box {
+        margin-bottom: -5rem; } }
   .port__btn-box {
     display: flex;
     justify-content: center;
-    margin-top: 17rem; }
+    margin-top: 17rem;
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 75em) {
+      .port__btn-box {
+        margin-top: 12rem; } }
+    @media only screen and (max-width: 56.25em), screen and (hover: none) {
+      .port__btn-box {
+        margin-bottom: -25rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .port__btn-box {
+        justify-content: space-around; } }
+    @media only screen and (max-width: 37.5em) {
+      .port__btn-box {
+        justify-content: center;
+        margin-right: -1rem;
+        margin-bottom: -30rem; } }
   .port__btn:not(:last-child) {
     margin-right: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .port__btn:not(:last-child) {
+      margin-right: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .port__btn {
+      margin-top: 1rem; }
+      .port__btn:not(:last-child) {
+        margin-right: 1rem; }
+      .port__btn:last-child {
+        margin-right: 1rem; } }
   .port__show {
-    margin-top: 13rem;
+    max-width: 115rem;
+    margin: 0 auto;
+    margin-top: 11rem;
+    padding-left: 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap; }
 
 .contact {
@@ -348,10 +620,16 @@ body {
   position: relative;
   background-image: linear-gradient(to bottom, #1b1735f5, #322a5a);
   overflow: hidden; }
+  @media only screen and (max-width: 37.5em) {
+    .contact {
+      padding-top: 5rem; } }
   .contact__header {
     text-align: center;
     font-size: 7rem;
     color: #ff6666; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__header {
+        font-size: 5.5rem; } }
   .contact__form {
     display: flex;
     flex-direction: column;
@@ -359,11 +637,17 @@ body {
     justify-content: center;
     width: 70%;
     margin: 0 auto; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__form {
+        width: 90%; } }
   .contact__names-box {
     margin-bottom: 2rem;
     width: 100%;
     display: flex;
     justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__names-box {
+        display: block; } }
   .contact__input-name {
     width: calc(50% - 1.2rem);
     padding: 1.5rem 1.8rem;
@@ -380,6 +664,10 @@ body {
       border: 1px solid rgba(247, 247, 247, 0.8);
       transform: scale(1.02);
       color: #f7f7f7; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__input-name {
+        width: 100%;
+        margin-top: 2rem; } }
   .contact__input {
     flex: 0 0 100%;
     width: 100%;
@@ -436,6 +724,9 @@ body {
     align-items: center;
     justify-content: space-around;
     width: 20%; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__icon-box {
+        width: 90%; } }
   .contact__social-icon {
     position: relative;
     z-index: 2;

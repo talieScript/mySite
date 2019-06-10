@@ -2,6 +2,13 @@
     background-image: linear-gradient(to bottom, $color-primary-light, $color-primary);
     padding-top: 15rem;
     padding-bottom:6rem;
+    overflow: hidden;
+    @include respond(tab-port-no-hover) {
+        padding-top: 8rem;
+    }
+    @include respond(tab-port-no-hover) {
+        padding-bottom: 25rem;
+    }
 
     &__header {
         margin-top: 4rem;
@@ -14,6 +21,12 @@
         p {
             width: 50%;
             margin-left: 10%;
+            @include respond(tab-port-no-hover) {
+                width: 70%;
+            }
+        }
+        @include respond(phone) {
+            margin-bottom: -5rem;
         }
     }
 
@@ -21,18 +34,50 @@
         display: flex;
         justify-content: center;
         margin-top: 17rem;
+        flex-wrap: wrap;
+        @include respond(tab-lan) {
+            margin-top: 12rem;
+        }
+        @include respond(tab-port-no-hover) {
+            margin-bottom: -25rem;
+        }
+        @include respond(tab-port) {
+            justify-content: space-around;
+        }
+        @include respond(phone) {
+            justify-content: center;
+            margin-right: -1rem;
+            margin-bottom: -30rem;
+        }
     }
 
     &__btn {
         &:not(:last-child) {
             margin-right: 2rem;
         }
+        @include respond(tab-port) {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+        @include respond(phone) {
+            margin-top: 1rem;
+            &:not(:last-child) {
+                margin-right: 1rem; 
+            }
+            &:last-child {
+                margin-right: 1rem; 
+            }
+        }
     }
 
     &__show {
-        margin-top: 13rem;
+        max-width: 115rem;
+        margin: 0 auto;
+        margin-top: 11rem;
+        padding-left: 2rem;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        justify-content: center;
+        flex-wrap: wrap;        
     }
 }

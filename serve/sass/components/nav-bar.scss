@@ -5,6 +5,8 @@
     position: fixed;
     width:100%;
     z-index: 1000;
+    // collapse animation transition
+    transition: height .4s .4s cubic-bezier(.81,.25,.47,1.04);
     &__container {
         display: flex;
         align-content: center;
@@ -12,6 +14,9 @@
         max-width: 110rem;
         margin: 0 auto;
         height: 100%;
+        @include respond(tab-lan) {
+            width: 85%;
+        }
     }
     &__logo {
         filter: grayscale(100%);
@@ -20,6 +25,12 @@
         height: 4rem;
         width: auto;
         transition: all .3;
+        @include respond(tab-port) {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+        }
+        
     }
     &__logo:hover {
         filter: none;
@@ -29,6 +40,15 @@
         justify-content: space-around;
         width: 40%;
         list-style: none;
+        @include respond(tab-lan) {
+            width: 60%;
+        }
+        @include respond(tab-port) {
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+        }
 
     }
     &__item {
@@ -41,17 +61,54 @@
         padding-top: 2.9rem;
         border-top: solid 0 var(--color-secondary);
         cursor: pointer;
+        &:hover {
+            padding-top: 1.7rem;
+            border-top: solid .4rem var(--color-secondary);
+            color: white;
+        }
+        
+        
+        
+        @include respond(tab-port) {
+            align-self: center;
+            border-left: solid 0 var(--color-secondary);
+            padding-top: 0;
+            margin-top: 10%;
+            margin-left: -200%;
+            transition: margin-left 1s cubic-bezier(.65,.06,.15,1.46);
+            line-height: 2.6rem;
+            &:hover {
+                padding-top: 0;
+                border-top: none;
+                color: white;
+            }
+
+            // animation class
+            // nav__item--animate class
+            &--animate {
+                margin-left: 0;
+                transition-delay: .4s;
+                transition-property: margin-left;
+            }
+        }
+        @include respond(phone) {
+            width: 100%;
+            padding-right: 0;
+            
+        }
     }
     &__item-active {
         padding-top: 2.3rem;
         border-top: solid .4rem var(--color-secondary);
         color: white;
+        @include respond(tab-port) {
+            align-self: center;
+            border-top: none;
+            border-left: solid .4rem var(--color-secondary);
+            padding-top: 0;     
+        }
     }
-    &__item:hover {
-        padding-top: 1.7rem;
-        border-top: solid .4rem var(--color-secondary);
-        color: white;
-    }
+   
     &__link:link, &__link:visited  {
             width: 100%;
             text-decoration: none;
@@ -60,5 +117,85 @@
             font-family: $primary-font;
             justify-self: center;
             color: inherit;
+            @include respond(tab-port) {
+                font-size: 3rem;
+            }
+            @include respond(phone) {
+                padding-right: 1rem;
+            }
+
+    }
+
+    // === callopse  styling =====
+    &__collapse-btn-box {
+        position: relative;
+        margin-top: .5rem;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__collapse-btn {
+        position: absolute;
+        top: 3rem;
+        right: -3rem;
+        display: none;
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
+    
+    &__icon {
+        position: relative;
+        transition: all .3s;
+        @include respond(phone) {
+            margin-right: 1.5rem;
+        }
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 3px;
+            background-color: $color-grey-light;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .3s;
+        }
+        &::before {
+            top: -1.1rem;
+        }
+        &::after {
+            top: 1.1rem;
+        }
+    }
+
+    // animation class
+    // nav__icon--animated
+    &__icon--animate::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    &__icon--animate::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    &__icon--animate {
+        background-color: transparent;
     }
 }
+
+// collapse nav animation classe
+.nav--animate {
+    transition: all .5s cubic-bezier(.81,.25,.47,1.04);
+    height: 100vh;
+    flex-direction: column;
+    transition-delay: 0;
+}
+

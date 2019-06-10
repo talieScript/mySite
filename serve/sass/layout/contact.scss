@@ -2,12 +2,19 @@
     padding-top: 10rem;
     position: relative;
     background-image: linear-gradient(to bottom, $color-primary, $color-primary-light-1);
+    // background-color: $color-primary-light-1;
     overflow: hidden;
+    @include respond(phone) {
+        padding-top: 5rem;
+    }
 
     &__header {
         text-align: center;
         font-size: 7rem;
         color: $color-secondary;
+        @include respond(phone) {
+            font-size: 5.5rem;
+        }
     }
 
     &__form {
@@ -17,6 +24,9 @@
         justify-content: center;
         width: 70%;
         margin: 0 auto;
+        @include respond(phone) {
+            width: 90%;
+        }
     }
 
     // first and second names in the name box
@@ -26,6 +36,9 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        @include respond(phone) {
+            display: block;
+        }
     }
 
     &__input-name {
@@ -47,6 +60,11 @@
             border: 1px solid rgba($color-grey-light, $alpha: .8);
             transform: scale(1.02);
             color: $color-grey-light;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            margin-top:2rem;
         }
     }
 
@@ -123,7 +141,9 @@
         align-items: center;
         justify-content: space-around;
         width: 20%;
-
+        @include respond(phone) {
+            width: 90%;
+        }
     }
 
     &__social-icon {
