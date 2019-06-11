@@ -13,10 +13,10 @@
         <div class="nav__container">
             <img src="./images/logo/TB.png" alt="" class="nav__logo">
             <ul class="nav__list">
-                <li class="nav__item nav__item-active"><a href="/" class="nav__link" >Home</a></li>
-                <li class="nav__item"><a href="/" class="nav__link">About Me</a> </li>
-                <li class="nav__item"><a href="/" class="nav__link">Portfolio</a> </li>
-                <li class="nav__item"><a href="/" class="nav__link">Contact</a> </li>
+                <li id="navHome" class="nav__item"><a href="" class="nav__link" >Home</a></li>
+                <li id="navAbout" class="nav__item"><a href="" class="nav__link">About Me</a> </li>
+                <li id="navPort" class="nav__item"><a href="" class="nav__link">Portfolio</a> </li>
+                <li id="navCont" class="nav__item"><a href="" class="nav__link">Contact</a> </li>
             </ul>
             <div class="nav__collapse-btn-box">
                 <input id="nav-checkbox" type="checkbox" class="nav__checkbox">
@@ -26,7 +26,7 @@
             </div>
         </div>
     </nav>
-    <header class="header">
+    <header id="header" class="section header">
         <!-- background elements -->
         <h3 class="header__developer"><span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span></h3>
         <img class="header__obj" src="./images/background-svg/header-obj.png" alt="Header object">
@@ -45,7 +45,7 @@
         <!-- <img src="./images/me/not-me.png" alt="" class="header__img"> -->
     </header>
 
-    <section id="section-about" class="section about">
+    <section id="about" class="section about">
         <!-- background -->
         <img class="about__obj" src="./images/background-svg/obj-about.png" alt="about-obj">
         <!-- content -->
@@ -69,7 +69,7 @@
         <a href="#" class="btn--2 about__btn">Lets Talk</a>
     </section>
 
-    <section class="port">
+    <section id="port" class="section port">
         <div class="port__header">
             <span class="section-header__border--port section-header__border">&nbsp;</span><h4 class="section-header__title--port section-header__title">My Portfolio</h4>
         </div>
@@ -193,28 +193,9 @@
                     <label class="card__label" for="card__btn">Currenctly not hosted online &otimes;</label>
                 </div>
             </div>
-            <div class="card">
-                <!-- front of card -->
-                <div class="card__side card__side--front">
-                    <!-- front img -->
-                    <img class="card__img" src="./images/project/thisSite.png" alt="Taliesin' rgb colour game">
-
-                    <h4 class="card__name card__name--front">Old ortfolio</h4>
-                </div>
-
-                <!-- Back of card -->
-                <div class="card__side card__side--back">
-                    <h4 class="card__name card__name--back">RGB Color Game</h4>
-                    <p class="card__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, id. Quo quisquam, provident eum error molestiae veniam tempore quasi quas</p>
-                    
-                    <a class="card__btn-live card__btn-live--disabled">See Live &rarr;</a>
-                    <label class="card__label" for="card__btn">Currenctly not hosted online &otimes;</label>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <section class="contact">
+    <section id=contact class="section contact">
         <h4 class="contact__header">Contact Me</h4>
         <form action="" class="contact__form">
             <div class="contact__names-box">
@@ -265,16 +246,13 @@
         
     </section>
 
-    <footer class="footer">
+    <footer id="footer" class="section footer">
         <div class="footer__copy">
             2019 &copy; Taliesin Bowes De Angeli
         </div>
         <img class="footer__obj" src="./images/background-svg/contact-obj.svg" alt="contact obj">
     </footer>
         
-
-
-
     <script src="./scripts/main.js"></script>
 </body>
 </html>

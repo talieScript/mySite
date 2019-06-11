@@ -124,7 +124,8 @@ body {
     font-size: 1.7rem;
     font-family: "Karla", sans-serif;
     justify-self: center;
-    color: inherit; }
+    color: inherit;
+    pointer-events: none; }
     @media only screen and (max-width: 56.25em) {
       .nav__link:link, .nav__link:visited {
         font-size: 3rem; } }
@@ -439,7 +440,7 @@ body {
       height: 3.7rem; } }
   @media only screen and (max-width: 37.5em) {
     .section-header__border {
-      margin-left: 40%; } }
+      margin-left: 1rem; } }
 
 .section-header__title {
   font-size: 6rem;
@@ -509,6 +510,10 @@ body {
   .about__header {
     display: flex;
     justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .about__header {
+        justify-content: flex-end;
+        margin-right: 2rem; } }
   .about__main {
     margin: 0 auto;
     margin-top: 10rem;
@@ -563,6 +568,10 @@ body {
   .port__header {
     margin-top: 4rem;
     display: flex; }
+    @media only screen and (max-width: 37.5em) {
+      .port__header {
+        margin-top: 2.5rem;
+        margin-left: 2rem; } }
   .port__intro-box {
     display: flex;
     font-size: 2rem; }
@@ -718,6 +727,9 @@ body {
       outline: none;
       transform: translateY(-0.2rem) scale(1.03);
       box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3); }
+    @media only screen and (max-width: 37.5em) {
+      .contact__btn {
+        width: 100%; } }
   .contact__icon-box {
     margin: 4rem auto;
     display: flex;

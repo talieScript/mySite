@@ -132,7 +132,11 @@
             box-shadow: $dark-shadow;
 
         }
-        // width: 100%;
+        @include respond(phone) {
+            width: 100%;
+        }
+        
+
     }
 
     &__icon-box {

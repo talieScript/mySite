@@ -97,6 +97,8 @@
             
         }
     }
+    // active class
+    // nav__item-active
     &__item-active {
         padding-top: 2.3rem;
         border-top: solid .4rem var(--color-secondary);
@@ -117,6 +119,7 @@
             font-family: $primary-font;
             justify-self: center;
             color: inherit;
+            pointer-events: none;
             @include respond(tab-port) {
                 font-size: 3rem;
             }

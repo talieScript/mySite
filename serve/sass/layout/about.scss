@@ -19,6 +19,10 @@
     &__header {
         display: flex;
         justify-content: center;
+        @include respond(phone) {
+            justify-content: flex-end;
+            margin-right: 2rem;
+        }
     }
 
     &__main {
