@@ -129,6 +129,12 @@ window.addEventListener('scroll', () => {
     addActiveClass()
 });
 
+// lets talk and contact me buttons
+document.querySelectorAll(".contact-btn").forEach((el) => {
+    el.addEventListener("click", () => {  
+        scroll(sections[3]);
+    })
+})
 
 
     

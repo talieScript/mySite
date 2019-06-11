@@ -1,5 +1,4 @@
 [class^="btn"] {
-    &:visited, &:link {
         padding: 1.5rem 3rem;
         font-family: $primary-font;
         font-size: 2rem;
@@ -11,6 +10,9 @@
         @include respond(tab-port) {
             padding: .8rem 2rem;
         }
+        &:focus {
+            outline: none;
+        }
         &:hover {
             transform: translateY(-1rem) scale(1.03);
             box-shadow: $dark-shadow;
@@ -20,15 +22,13 @@
             transform: translateY(.2rem) scale(1);
             box-shadow: none;
         }
-    }
 }
 .btn {
     // header button
     &--1 {
         color: $color-grey-light;
-        background-color: $color-tertiary;
+        background-color: $color-secondary;
         border: solid 1px $color-grey-light;
-        
     }
 
     // About btn

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Karla&display=swap" rel="stylesheet">
+    <title>Find Talie</title>
+</head>
+<body>
+    <nav id="nav" class="nav">
+        <div class="nav__container">
+            <img src="./images/logo/TB.png" alt="" class="nav__logo">
+            <ul class="nav__list">
+                <li id="navHome" class="nav__item"><a href="" class="nav__link" >Home</a></li>
+                <li id="navAbout" class="nav__item"><a href="" class="nav__link">About Me</a> </li>
+                <li id="navPort" class="nav__item"><a href="" class="nav__link">Portfolio</a> </li>
+                <li id="navCont" class="nav__item"><a href="" class="nav__link">Contact</a> </li>
+            </ul>
+            <div class="nav__collapse-btn-box">
+                <input id="nav-checkbox" type="checkbox" class="nav__checkbox">
+                <label for="nav-checkbox" class="nav__collapse-btn">
+                    <span id="nav-icon" class="nav__icon">&nbsp;</span>
+                </label>
+            </div>
+        </div>
+    </nav>
+    <header id="header" class="section header">
+        <!-- background elements -->
+        <h3 class="header__developer"><span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span></h3>
+        <img class="header__obj" src="./images/background-svg/header-obj.png" alt="Header object">
+
+        <!-- Title elements -->
+        <div class="title">
+            <p class="title__secondary">Hello!</p>
+            <h1 class="title__main">I'm <strong>Taliesin</strong></h1>
+            <p class="title__text"> 
+                <span>A fullstacked developer, currenctly based in the UK.</span>
+                <span>Here you can find examples of work.</span>
+            </p>
+            <button href="" class="btn--1 title__btn contact-btn">Contact Me</button>
+        </div>
+        
+    </header>
+
+    <section id="about" class="section about">
+        <!-- background -->
+        <img class="about__obj" src="./images/background-svg/obj-about.png" alt="about-obj">
+        <!-- content -->
+        <div class="about__header">
+                <span class="section-header__border">&nbsp;</span><h4 class="section-header__title">About Me</h4>
+        </div>
+        <div class="about__main">
+            <fugure class="about__shape">
+                <img class="about__portrate" src="./images/me/aboutMe-big.jpg" alt="Picture of Taliesin Bowes De Angeli">
+                <figcaption class="about__caption">Talie</figcaption>
+            </fugure>
+            <div class="about__text-box">
+                    <h5 class="text-box__sub-header">Personal</h5>
+                    <p class="text-box__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, neque culpa. Nostrum, ut! Id adipisci error omnis, ut, repellendus quae asperiores enim sunt, nobis harum pariatur maxime sequi autem aut.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, neque culpa. Nostrum, ut! Id adipisci error omnis, ut, repellendus quae asperiores enim sunt, nobis harum pariatur maxime sequi autem aut.</p>
+                    <h5 class="text-box__sub-header">Technical</h5>
+                    <p class="text-box__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, neque culpa. Nostrum, ut! Id adipisci error omnis, ut, repellendus quae asperiores enim sunt, nobis harum pariatur maxime sequi autem aut.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, neque culpa. Nostrum, ut! Id adipisci error omnis, ut, repellendus quae asperiores enim sunt, nobis harum pariatur maxime sequi autem aut.</p>
+            </div>
+        </div>
+        <button href="" class="btn--2 about__btn contact-btn">Lets Talk</button>
+    </section>
+
+    <section id="port" class="section port">
+        <div class="port__header">
+            <span class="section-header__border--port section-header__border">&nbsp;</span><h4 class="section-header__title--port section-header__title">My Portfolio</h4>
+        </div>
+        <div class="port__intro-box">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, voluptatibus? Dicta ratione, consequuntur veniam quia cum vel Dicta ratione, consequuntur veniam quia cum vel</p> 
+        </div>
+        <div class="port__btn-box">
+            <a class="btn--3 btn--3--active port__btn">Fullstack</a>
+            <a class="btn--3 port__btn">Mini</a>
+        </div>
+        <div class="port__show">
+        
+            
+            
+    </section>
+
+    <section id=contact class="section contact">
+        <h4 class="contact__header">Contact Me</h4>
+        <form action="" class="contact__form">
+            <div class="contact__names-box">
+                <input placeholder="First*" name="first" type="text" class="contact__input-name" required>
+                <input placeholder="Second" name="second" type="text"class="contact__input-name">
+            </div>
+            <input placeholder="Email*" name="email" type="email" class="contact__input" required>
+            <input placeholder="Phone Number" name="phone" type="text" class="contact__input" minlength="10" maxlength="15">
+            <input placeholder="Company/Organization" name="company" type="text" class="contact__input">
+            <textarea class="contact__message" name="message*" cols="50" rows="10" placeholder="Message" required></textarea>
+            <button class=" contact__btn">Send Maessage</button>
+        </form>
+        <div class="contact__icon-box">
+            <a href="https://www.instagram.com/taliescript/" target="_blank">
+                <svg class="contact__social-icon contact__social-icon--1"  title="Creative Commons BY 3.0, https://www.freepik.com/?__hstc=57440181.4b238cec451a0af7b5d23f732976ebeb.1560100626630.1560100626630.1560100626630.1&__hssc=57440181.21.1560100626631&__hsfp=2374548094">
+                    <use xlink:href=".\images\icon\icon-sprite.svg#instagram" />
+                    <linearGradient id="insta-gradient" x2="1" y2="2">
+                            <stop offset="0%" stop-color="#405DE6" />
+                            <stop offset="14%" stop-color="#5851DB" />
+                            <stop offset="28%" stop-color="#833AB4" />
+                            <stop offset="70%" stop-color="#C13584" />
+                            <stop offset="84%" stop-color="#E1306C" />
+                            <stop offset="100%" stop-color="#FD1D1D" />
+                    </linearGradient>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/taliesin-bowes-de-angeli-132a60178/" target="_blank">
+                <svg class="contact__social-icon contact__social-icon--2">
+                    <use xlink:href=".\images\icon\icon-sprite.svg#link" />
+                    <linearGradient id="linked-gradient" x2="1" y2="2">
+                            <stop offset="0%" stop-color="#0077B5" />
+                            <!-- <stop offset="70%" stop-color="#9CDAF1" /> -->
+                            <stop offset="100%" stop-color="#55BEDC" />
+                    </linearGradient>
+                </svg>
+            </a>
+            <a href="https://github.com/talieScript" target="_blank">
+                <svg class="contact__social-icon contact__social-icon--3">
+                    <use xlink:href=".\images\icon\icon-sprite.svg#github" />
+                    <linearGradient id="git-gradient" x2="1" y2="2">
+                            <stop offset="0%" stop-color="#AD5C51" />
+                            <stop offset="70%" stop-color="#9CDAF1" />
+                            <stop offset="100%" stop-color="#7DBBE6" />
+                    </linearGradient>
+                </svg>
+            </a>
+        </div>
+        
+    </section>
+
+    <footer id="footer" class="section footer">
+        <div class="footer__copy">
+            2019 &copy; Taliesin Bowes De Angeli
+        </div>
+        <img class="footer__obj" src="./images/background-svg/contact-obj.svg" alt="contact obj">
+    </footer>
+        
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/projects.js"></script>
+</body>
+</html>
+

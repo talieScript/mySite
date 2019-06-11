@@ -5,6 +5,7 @@
     width: 25rem;
     position: relative;
     font-family: $primary-font;
+    opacity: 1;
     // overflow: hidden;
     margin-right: 3rem;
     margin-top: 3rem;
@@ -149,5 +150,11 @@
         @include respond(tab-port-no-hover) {
             transform: rotateY(0);
         }
+    }
+
+    transition: opacity 2s;
+    opacity: 1;
+    &-fade {
+        opacity: 0;
     }
 }

@@ -180,7 +180,7 @@ body {
   flex-direction: column;
   transition-delay: 0; }
 
-[class^="btn"]:visited, [class^="btn"]:link {
+[class^="btn"] {
   padding: 1.5rem 3rem;
   font-family: "Karla", sans-serif;
   font-size: 2rem;
@@ -190,19 +190,21 @@ body {
   transition: all .3s;
   letter-spacing: .2rem; }
   @media only screen and (max-width: 56.25em) {
-    [class^="btn"]:visited, [class^="btn"]:link {
+    [class^="btn"] {
       padding: .8rem 2rem; } }
-  [class^="btn"]:visited:hover, [class^="btn"]:link:hover {
+  [class^="btn"]:focus {
+    outline: none; }
+  [class^="btn"]:hover {
     transform: translateY(-1rem) scale(1.03);
     box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3);
     color: #fff; }
-  [class^="btn"]:visited:active, [class^="btn"]:link:active {
+  [class^="btn"]:active {
     transform: translateY(0.2rem) scale(1);
     box-shadow: none; }
 
 .btn--1 {
   color: #f7f7f7;
-  background-color: #098681;
+  background-color: #ff6666;
   border: solid 1px #f7f7f7; }
 
 .btn--2 {
@@ -241,8 +243,11 @@ body {
   width: 25rem;
   position: relative;
   font-family: "Karla", sans-serif;
+  opacity: 1;
   margin-right: 3rem;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  transition: opacity 2s;
+  opacity: 1; }
   @media only screen and (max-width: 56.25em), screen and (hover: none) {
     .card {
       margin-top: 27rem;
@@ -351,6 +356,8 @@ body {
     @media only screen and (max-width: 56.25em), screen and (hover: none) {
       .card:hover .card__side--back {
         transform: rotateY(0); } }
+  .card-fade {
+    opacity: 0; }
 
 .title {
   position: absolute;
@@ -548,7 +555,8 @@ body {
       .about__text-box {
         flex: 0 1 80%; } }
   .about__btn {
-    padding: 0.7rem 3rem !important;
+    border: none;
+    padding: 1rem 2rem;
     margin: 2rem;
     margin-right: 10%;
     position: absolute;
@@ -603,6 +611,8 @@ body {
         justify-content: center;
         margin-right: -1rem;
         margin-bottom: -30rem; } }
+  .port__btn:hover {
+    color: #777; }
   .port__btn:not(:last-child) {
     margin-right: 2rem; }
   @media only screen and (max-width: 56.25em) {
