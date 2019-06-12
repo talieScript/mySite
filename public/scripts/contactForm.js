@@ -7,15 +7,15 @@ const express      = require('express'),
 router.post("/send", (req, res) => {
     console.log(req.body.first)
     var transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com', // hostname
-        port: 465,
-        secure: true, // use SSL
+        host: "smtp-mail.outlook.com", // hostname
+        secureConnection: false, // TLS requires secureConnection to be false
+        port: 587, // port for secure SMTP
         tls: {
-        ciphers:'SSLv3'
+            ciphers:'SSLv3'
         },
         auth: {
-            user: 't.bowesdeangeli@gmail.com',
-            pass: 'Q92SXE!Ncsd#jGp'
+            user: 'taliesin.bowes@hotmail.co.uk',
+            pass: 'B9HwKFFpjb2zP9ZGjzZK*'
         }
     });
 
