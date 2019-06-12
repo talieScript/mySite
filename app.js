@@ -24,11 +24,6 @@ app.get("/", (req, res) => {
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-
-
-
-
-
 app.listen(process.env.PORT || 8000, () => {
     console.log('app listening on port 8000!')
 });
