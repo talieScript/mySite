@@ -8,13 +8,33 @@
             "liveLink": "https://www.niftygallery.com/"
         },
         "vue-fullstack": {
-            "name": "Vue JS Geust Book",
+            "name": "Vue JS Guest Book",
             "image": "vuefullstack.png",
             "text": "This a simple guest book app that stores the data in a NoSQL database. I used node /w express and vue js for the front end. Styling is just a bit of pure css w/ flex box.. No frameworks.",
             "isLive": true,
             "liveLink": "https://stark-inlet-35231.herokuapp.com/"
+        },     
+        "old-site": {
+            "name": "Old Portfolio Site",
+            "image": "oldSite.png",
+            "text": "This is the predecessor to this site you are currently on. I made it with a lot of JS libraries, which made it vary slow and glitchy. For the back-end I used node /w express and the rest was simple html, css and jQuery.",
+            "isLive": false,
+            "liveLink": ""
+        },     
+        "this-site": {
+            "name": "This Site",
+            "image": "port-site.png",
+            "text": "This site is all pure css and vanilla javascript, that I designed and built. The projects are called with ajax from a JSON api & the backend is Express. Also please try the responsive design by changing the screen size.",
+            "isLive": true,
+            "liveLink": "/"
+        },
+        "easy-poll": {
+            "name": "Easy Poll Maker",
+            "image": "easy-poll.png",
+            "text": "Still in production. It will be a site that a user will be able to create a poll for other users to come and vote on. I’m using node /w Express, Mongo DB and Vue JS. Check my GitHub for the repo.",
+            "isLive": false,
+            "liveLink": ""
         }
-               
     },
     "css": {
         "rgb_game": {
@@ -45,7 +65,40 @@
             "isLive": true,
             "liveLink": "https://codepen.io/taliesin-bowes-de-angeli/project/editor/DkLzjE"
         }
+    },
+    "vue": {
+        "Quiz": {
+            "name": "Quiz game",
+            "image": "flip-cards.png",
+            "text": "This is a Vue only project. I made this to get more accustomed with using front end frameworks. It gets quiz questions from a REST api, the user has to pick an answer and it keeps track of their score.",
+            "isLive": false,
+            "liveLink": ""
+        },
+        "vue-fullstack": {
+            "name": "Vue JS Guest Book",
+            "image": "vuefullstack.png",
+            "text": "This a simple guest book app that stores the data in a NoSQL database. I used node /w express and vue js for the front end. Styling is just a bit of pure css w/ flex box.. No frameworks.",
+            "isLive": true,
+            "liveLink": "https://stark-inlet-35231.herokuapp.com/"
+        },
+        "easy-poll": {
+            "name": "Easy Poll Maker",
+            "image": "easy-poll.png",
+            "text": "Still in production. It will be a site that a user will be able to create a poll for other users to come and vote on. I’m using node /w Express, Mongo DB and Vue JS. Check my GitHub for the repo.",
+            "isLive": false,
+            "liveLink": ""
+        }
+    },
+    "node": {
+        "crypto": {
+            "name": "Crypto Chatbot",
+            "image": "crypto_bot.jpg",
+            "text": "The user send a message with a currency and it returns a message with the latest prices that it get from an api. Currently under review from facebook, so only work on my account at the moment.",
+            "isLive": true,
+            "liveLink": "https://www.facebook.com/Crypto-Bot-267797697488648/?modal=admin_todo_tour"
+        }
     }
+
     
     
 }
