@@ -1,7 +1,8 @@
 const express        = require("express"),
       bodyParser     = require('body-parser'),
       cors           = require('cors'),
-      app            = express();
+      app            = express(),
+      nodemailer     = require("nodemailer");
 
 // middleware
 app.use(bodyParser.json());
@@ -12,9 +13,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 const projects = require('./routes/projects-api.js');
 app.use('/api/projects', projects);
 
-// constact form post route 
+// conntact form post route 
 const contact = require('./routes/contact.js');
-app.use('/', contact);
+app.use('/post', contact);
+
 
 app.use(express.static(__dirname+"/public"));
 
@@ -22,9 +24,13 @@ app.get("/", (req, res) => {
     res.render("index.html");
 });
 
+app.get("*", (req, res) => {
+    res.redirect("/");
+});
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-app.listen(process.env.PORT || 8000, () => {
+app.listen(8000, () => {
     console.log('app listening on port 8000!')
 });
 
