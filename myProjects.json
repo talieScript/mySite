@@ -1,62 +1,49 @@
 {
-    "mini": {
+    "fullstack": {
+        "nifty": {
+            "name": "Nifty Gallery",
+            "image": "nifty.png",
+            "text": "My first full-stack project. This is the official website for Nifty Gallery (a local art gallery).  I made a it with html, css & javascript, then converted it to a Wordpress template for the CMS.",
+            "isLive": true,
+            "liveLink": "https://www.niftygallery.com/"
+        },
+        "vue-fullstack": {
+            "name": "Vue JS Geust Book",
+            "image": "vuefullstack.png",
+            "text": "This a simple guest book app that stores the data in a NoSQL database. I used node /w express and vue js for the front end. Styling is just a bit of pure css w/ flex box.. No frameworks.",
+            "isLive": true,
+            "liveLink": "https://stark-inlet-35231.herokuapp.com/"
+        }
+               
+    },
+    "css": {
         "rgb_game": {
             "name": "RGB Colour Game",
             "image": "RGB.png",
-            "text": "This is one of my first ever prjects, I made along side a course I took. I used; HTML, CSS and vinilla JS.",
+            "text": "This is one of my first ever prjects, its a small game. I used; HTML, CSS and vinilla JS.",
             "isLive": true,
             "liveLink": "https://codepen.io/taliesin-bowes-de-angeli/pen/eLYwbw"
         },
         "calculator": {
             "name": "Calculator",
             "image": "calculator.png",
-            "text": "This is an old project, but I like it so i got it here. This is just a simple js calculator. I used; HTML, CSS and vinilla JS.",
+            "text": "This is an old project, but I like it so I got it here. This is just a simple js calculator. I used; HTML, CSS and vinilla JS.",
             "isLive": false,
             "liveLink": ""
-        }
-    },
-    "fullstack": {
-        "vue_fullstack": {
-            "name": "Vue Guest Book",
-            "image": "RGB.png",
-            "text": "This is a fullstacked project that i make to help me understand how to connect the client and server sides. I used; Vue, sass, and node w/ express",
-            "isLive": true,
-            "liveLink": "https://stark-inlet-35231.herokuapp.com/"
         },
-        "nifty": {
-            "name": "Nifty Gallery",
-            "image": "nifty.png",
-            "text": "My first fullstack project. This was made for a local art gallery, where I designed and made a wordpress tmaplate. I used; php, jQuery & CSS",
+        "Sass_Float_Grid": {
+            "name": "Sass Float Grid",
+            "image": "float-grid.png",
+            "text": "This is a float grid system similar to bootstraps grid system. A bit outdated, now I use flex-box mostly.",
             "isLive": true,
-            "liveLink": "https://stark-inlet-35231.herokuapp.com/"
+            "liveLink": "https://codepen.io/taliesin-bowes-de-angeli/pen/zbVKLg"
         },
-        "another one": {
-            "name": "Vue Guest Book",
-            "image": "RGB.png",
-            "text": "This is a fullstacked project that i make to help me understand how to connect the client and server sides. I used; Vue, sass, and node w/ express",
+        "css_flip_cards": {
+            "name": "Animated Flip Cards",
+            "image": "flip-cards.png",
+            "text": "These are flip animation cards I designed and built using pure css/sass. This was a challenge I gave myself to help me get used to scss.",
             "isLive": true,
-            "liveLink": "https://stark-inlet-35231.herokuapp.com/"
-        },
-        "another two": {
-            "name": "Nifty Gallery",
-            "image": "nifty.png",
-            "text": "My first fullstack project. This was made for a local art gallery, where I designed and made a wordpress tmaplate. I used; php, jQuery & CSS",
-            "isLive": true,
-            "liveLink": "https://stark-inlet-35231.herokuapp.com/"
-        },
-        "another three": {
-            "name": "Vue Guest Book",
-            "image": "RGB.png",
-            "text": "This is a fullstacked project that i make to help me understand how to connect the client and server sides. I used; Vue, sass, and node w/ express",
-            "isLive": true,
-            "liveLink": "https://stark-inlet-35231.herokuapp.com/"
-        },
-        "another four": {
-            "name": "Nifty Gallery",
-            "image": "nifty.png",
-            "text": "My first fullstack project. This was made for a local art gallery, where I designed and made a wordpress tmaplate. I used; php, jQuery & CSS",
-            "isLive": true,
-            "liveLink": "https://stark-inlet-35231.herokuapp.com/"
+            "liveLink": "https://codepen.io/taliesin-bowes-de-angeli/project/editor/DkLzjE"
         }
     }
     
