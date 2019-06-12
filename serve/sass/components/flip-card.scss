@@ -112,9 +112,13 @@
         &--disabled {
             text-decoration: line-through;
             color: $color-grey-dark;
-            &:hover {
+            background-color: transparent;
+            border: none;
+
+            &:hover, &:active, &:focus {
                 letter-spacing: 0;
                 text-decoration: line-through;
+                outline: none;
             }
     
         }

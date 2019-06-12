@@ -80,14 +80,11 @@
             <a class="btn--3 port__btn">Mini</a>
         </div>
         <div class="port__show">
-        
-            
-            
     </section>
 
     <section id=contact class="section contact">
         <h4 class="contact__header">Contact Me</h4>
-        <form action="" class="contact__form">
+        <form action="/send" method="POST" class="contact__form" name="contact">
             <div class="contact__names-box">
                 <input placeholder="First*" name="first" type="text" class="contact__input-name" required>
                 <input placeholder="Second" name="second" type="text"class="contact__input-name">
@@ -95,8 +92,8 @@
             <input placeholder="Email*" name="email" type="email" class="contact__input" required>
             <input placeholder="Phone Number" name="phone" type="text" class="contact__input" minlength="10" maxlength="15">
             <input placeholder="Company/Organization" name="company" type="text" class="contact__input">
-            <textarea class="contact__message" name="message*" cols="50" rows="10" placeholder="Message" required></textarea>
-            <button class=" contact__btn">Send Maessage</button>
+            <textarea class="contact__message" name="message" cols="50" rows="10" placeholder="Message*" required></textarea>
+            <button class="contact__btn">Send Maessage</button>
         </form>
         <div class="contact__icon-box">
             <a href="https://www.instagram.com/taliescript/" target="_blank">
@@ -145,6 +142,7 @@
         
     <script src="./scripts/main.js"></script>
     <script src="./scripts/projects.js"></script>
+    <script src="./scripts/contactForm.js"></script>
 </body>
 </html>
 

@@ -329,10 +329,13 @@ body {
       text-decoration: underline; }
     .card__btn-live--disabled {
       text-decoration: line-through;
-      color: #777; }
-      .card__btn-live--disabled:hover {
+      color: #777;
+      background-color: transparent;
+      border: none; }
+      .card__btn-live--disabled:hover, .card__btn-live--disabled:active, .card__btn-live--disabled:focus {
         letter-spacing: 0;
-        text-decoration: line-through; }
+        text-decoration: line-through;
+        outline: none; }
   .card__label {
     position: absolute;
     background-color: red;

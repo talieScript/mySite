@@ -3,7 +3,6 @@ function ajax_get(url, callback) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            // console.log('responseText:' + xmlhttp.responseText);
             try {
                 data = JSON.parse(xmlhttp.responseText);
             } catch(err) {
@@ -15,42 +14,19 @@ function ajax_get(url, callback) {
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
-}
+}    
 
-// collection data get and convert to arr 
-let dataArr
-function getCollection(collection) {
-    var lower = collection.toLowerCase();
-   ajax_get("/api/projects/"+lower, function() {
-        dataArr = Object.values(data);
-    });
-};
-
-// button click listeners 
-const portBtns = document.querySelectorAll(".port__btn");
-portBtns.forEach((el) => {
-    let collection = el.innerHTML;
-    el.addEventListener("click", () => {
-        getCollection(collection.toLowerCase())
-        setTimeout(() => {
-            sendTemplates();
-        }, 100)
-        
-    })
-});
-
-
-
-function sendTemplates() {
+// create and send temaplates to portifolio section
+function sendTemplates(data) {
     let markUp = [];
-    dataArr.forEach((el) => {
+    data.forEach((el) => {
         function checkLive(el) {
             if(el.isLive === true) {
                 return `
-                <a href="${el.liveLink})" class="card__btn-live">See Live &rarr;</a>
+                <a href="${el.liveLink}" class="card__btn-live" target="_blank">See Live &rarr;</a>
                 `
             } else{ return `
-            <a href="${el.liveLink})" class="card__btn-live card__btn-live--disabled">See Live &rarr;</a>
+            <button href="" class="card__btn-live card__btn-live--disabled">See Live &rarr;</button>
             <label class="card__label" for="card__btn">Currenctly not hosted online &otimes;</label>
             `
             }
@@ -85,5 +61,39 @@ function sendTemplates() {
     })
 }
 
+// collection data get and convert to ar, then run sendTemplates with the data
+async function getCollection(collection) {
+    var lower = collection.toLowerCase();
+    new Promise((resolve, reject) => {
+        resolve(ajax_get("/api/projects/"+lower, () => {
+            sendTemplates(Object.values(data))
+        }))
+    });   
+}
+
+// get button elements
+const portBtns = document.querySelectorAll(".port__btn");
+
+// button active function
+function activeBtn(btn) {
+    portBtns.forEach((el) => {
+        el.classList.remove("btn--3--active");
+    });
+    btn.classList.add("btn--3--active");
+}
+
+// button click listeners 
+portBtns.forEach((el) => {
+    let collection = el.innerHTML;
+    el.addEventListener("click", () => {
+        getCollection(collection.toLowerCase())
+        activeBtn(el);        
+    })
+});
+
+// get fullstack projects on page load
+(function getCollectionOnLOad() {
+    getCollection("fullstack")
+})();
 
 
