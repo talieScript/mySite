@@ -434,6 +434,11 @@ body {
   @media only screen and (max-width: 75em) {
     .text-box__paragraph {
       font-size: 1.7rem; } }
+  .text-box__paragraph strong {
+    color: #eee; }
+
+.text-box__strong {
+  color: #eee; }
 
 .section-header__border {
   border-left: solid .9rem #ff6666;

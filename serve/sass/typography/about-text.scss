@@ -21,7 +21,7 @@
         }
     }
     &__paragraph {
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: $color-grey-dark-2;
         &:not(:last-child) {
             margin-bottom: 2rem;
@@ -29,6 +29,12 @@
         @include respond(tab-lan) {
             font-size: 1.7rem;
         }
-        
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+    }
+    &__strong {
+        color: $color-grey-light-2;
     }
 }
