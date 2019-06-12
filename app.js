@@ -17,7 +17,6 @@ app.use('/api/projects', projects);
 const contact = require('./routes/contact.js');
 app.use('/post', contact);
 
-
 app.use(express.static(__dirname+"/public"));
 
 app.get("/", (req, res) => {
@@ -30,7 +29,7 @@ app.get("*", (req, res) => {
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log('app listening on port 8000!')
 });
 
