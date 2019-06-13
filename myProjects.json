@@ -2,36 +2,36 @@
     "fullstack": {
         "nifty": {
             "name": "Nifty Gallery",
-            "image": "nifty.png",
-            "text": "My first full-stack project. This is the official website for Nifty Gallery (a local art gallery).  I made a it with html, css & javascript, then converted it to a Wordpress template for the CMS.",
+            "image": "nifty",
+            "text": "My first full-stack project. This is the official website for Nifty Gallery (a local art gallery). I used html, css & javascript, then converted it to a Wordpress template for the client's CMS.",
             "isLive": true,
             "liveLink": "https://www.niftygallery.com/"
         },
         "vue-fullstack": {
             "name": "Vue JS Guest Book",
-            "image": "vuefullstack.png",
-            "text": "This a simple guest book app that stores the data in a NoSQL database. I used node /w express and vue js for the front end. Styling is just a bit of pure css w/ flex box.. No frameworks.",
+            "image": "vuefullstack",
+            "text": "This a simple guest book app that stores the data in a NoSQL database. I used node /w express for the back end, vue js for the front end and mongoDB for the database. The styling is just a bit of pure css using flex box.",
             "isLive": true,
             "liveLink": "https://stark-inlet-35231.herokuapp.com/"
         },     
         "old-site": {
             "name": "Old Portfolio Site",
-            "image": "oldSite.png",
-            "text": "This is the predecessor to this site you are currently on. I made it with a lot of JS libraries, which made it vary slow and glitchy. For the back-end I used node /w express and the rest was simple html, css and jQuery.",
+            "image": "oldSite",
+            "text": "This is the predecessor to this site. I used a lot of JS libraries, which made it a bit slow and glitchy. For the back-end I used node /w express and the rest was simple html, css and jQuery.",
             "isLive": false,
             "liveLink": ""
         },     
         "this-site": {
             "name": "This Site",
-            "image": "port-site.png",
-            "text": "This site is all pure css and vanilla javascript, that I designed and built. The projects are called with ajax from a JSON api & the backend is Express. Also please try the responsive design by changing the screen size.",
+            "image": "port-site",
+            "text": "This site is all pure css & vanilla javascript, that I designed and built. The projects are called with ajax from a JSON api & the backend is Express. Also please try the responsive design by changing the screen size.",
             "isLive": true,
             "liveLink": "/"
         },
         "easy-poll": {
             "name": "Easy Poll Maker",
-            "image": "easy-poll.png",
-            "text": "Still in production. It will be a site that a user will be able to create a poll for other users to come and vote on. I’m using node /w Express, Mongo DB and Vue JS. Check my GitHub for the repo.",
+            "image": "easy-poll",
+            "text": "[Still in production] This will be a site for a user to create a poll then other users to come and vote on. I’m using node /w Express, Mongo DB and Vue JS. Check my GitHub for the repo.",
             "isLive": false,
             "liveLink": ""
         }
@@ -39,28 +39,28 @@
     "css": {
         "rgb_game": {
             "name": "RGB Colour Game",
-            "image": "RGB.png",
-            "text": "This is one of my first ever prjects, its a small game. I used; HTML, CSS and vinilla JS.",
+            "image": "RGB",
+            "text": "This is one of my first ever prjects, its a small colour picking game. I used; HTML, CSS and vinilla JS.",
             "isLive": true,
             "liveLink": "https://codepen.io/taliesin-bowes-de-angeli/pen/eLYwbw"
         },
         "calculator": {
             "name": "Calculator",
-            "image": "calculator.png",
-            "text": "This is an old project, but I like it so I got it here. This is just a simple js calculator. I used; HTML, CSS and vinilla JS.",
+            "image": "calculator",
+            "text": "This is an old project. This is just a simple js calculator. I used; HTML, CSS and vinilla JS.",
             "isLive": false,
             "liveLink": ""
         },
         "Sass_Float_Grid": {
             "name": "Sass Float Grid",
-            "image": "float-grid.png",
+            "image": "float-grid",
             "text": "This is a float grid system similar to bootstraps grid system. A bit outdated, now I use flex-box mostly.",
             "isLive": true,
             "liveLink": "https://codepen.io/taliesin-bowes-de-angeli/pen/zbVKLg"
         },
         "css_flip_cards": {
             "name": "Animated Flip Cards",
-            "image": "flip-cards.png",
+            "image": "flip-cards",
             "text": "These are flip animation cards I designed and built using pure css/sass. This was a challenge I gave myself to help me get used to scss.",
             "isLive": true,
             "liveLink": "https://codepen.io/taliesin-bowes-de-angeli/project/editor/DkLzjE"
@@ -69,21 +69,21 @@
     "vue": {
         "Quiz": {
             "name": "Quiz game",
-            "image": "flip-cards.png",
-            "text": "This is a Vue only project. I made this to get more accustomed with using front end frameworks. It gets quiz questions from a REST api, the user has to pick an answer and it keeps track of their score.",
+            "image": "quiz",
+            "text": "This is a Vue only project. I made this to get more accustomed with using front end frameworks. It gets quiz questions from a REST api, the user then picks an answer and it keeps track of their score.",
             "isLive": false,
             "liveLink": ""
         },
         "vue-fullstack": {
             "name": "Vue JS Guest Book",
-            "image": "vuefullstack.png",
+            "image": "vuefullstack",
             "text": "This a simple guest book app that stores the data in a NoSQL database. I used node /w express and vue js for the front end. Styling is just a bit of pure css w/ flex box.. No frameworks.",
             "isLive": true,
             "liveLink": "https://stark-inlet-35231.herokuapp.com/"
         },
         "easy-poll": {
             "name": "Easy Poll Maker",
-            "image": "easy-poll.png",
+            "image": "easy-poll",
             "text": "Still in production. It will be a site that a user will be able to create a poll for other users to come and vote on. I’m using node /w Express, Mongo DB and Vue JS. Check my GitHub for the repo.",
             "isLive": false,
             "liveLink": ""
@@ -92,8 +92,8 @@
     "node": {
         "crypto": {
             "name": "Crypto Chatbot",
-            "image": "crypto_bot.jpg",
-            "text": "The user send a message with a currency and it returns a message with the latest prices that it get from an api. Currently under review from facebook, so only work on my account at the moment.",
+            "image": "crypto_bot",
+            "text": "This is a chatbot where a user sends a message with a currency code and it returns a message with the latest prices that it gets from an api. Currently under review from facebook.",
             "isLive": true,
             "liveLink": "https://www.facebook.com/Crypto-Bot-267797697488648/?modal=admin_todo_tour"
         }

@@ -36,7 +36,8 @@ function sendTemplates(data) {
                 <!-- front of card -->
                 <div class="card__side card__side--front">
                     <!-- front img -->
-                    <img class="card__img" src="./images/project/${el.image}" alt="Project ${el.name} example image">
+                    <img  src="./images/project/${el.image}-small.jpg"
+                        alt="Project ${el.name} example image" class="card__img">
 
                     <h4 class="card__name card__name--front">${el.name}</h4>
                 </div>
@@ -93,6 +94,7 @@ portBtns.forEach((el) => {
 
 // get fullstack projects on page load
 (function getCollectionOnLOad() {
+    activeBtn(portBtns[0]); 
     getCollection("fullstack")
 })();
 
