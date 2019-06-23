@@ -318,10 +318,10 @@ body {
         font-size: 1.3rem; } }
   .card__btn-live {
     position: absolute;
-    bottom: .5rem;
+    bottom: 0;
     right: .5rem;
     font-size: 1.8rem;
-    padding: .4rem .6rem;
+    padding: 0 .6rem;
     padding-left: 1rem;
     color: #f7f7f7;
     cursor: pointer;
